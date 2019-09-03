@@ -1,0 +1,6 @@
+---
+name: myextension
+---
+SilverStripe\Forms\FormField:
+  extensions:
+    - DefaultFormField_Extensions
