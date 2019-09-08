@@ -1,28 +1,24 @@
+# Kartik Patel
+
 ## Overview
 
-Base project folder for a SilverStripe ([http://silverstripe.org](http://silverstripe.org)) installation. Required modules are installed via [http://github.com/silverstripe/recipe-cms](http://github.com/silverstripe/recipe-cms). For information on how to change the dependencies in a recipe, please have a look at [https://github.com/silverstripe/recipe-plugin](https://github.com/silverstripe/recipe-plugin). In addition, installer includes [theme/simple](https://github.com/silverstripe-themes/silverstripe-simple) as a default theme.
+Basic silverstripe project that is keep up to date with latest version to the best ability. Follow the guide below to setup for your project and get going.
 
-## Installation ##
+## Requirements
+- PHP 7.0+
 
-See [installation on different platforms](http://doc.silverstripe.org/framework/en/installation/),
-and [installation from source](http://doc.silverstripe.org/framework/en/installation/from-source).
+## Installation
 
-## Bugtracker ##
+```
+git clone https://github.com/kartikpatel95/ss-project-setup.git
+```
+In the root of the project run ```composer install``` to install the dependent packages
 
-Bugs are tracked on github.com ([framework issues](https://github.com/silverstripe/silverstripe-framework/issues),
-[cms issues](https://github.com/silverstripe/silverstripe-cms/issues)).
-Please read our [issue reporting guidelines](https://docs.silverstripe.org/en/4/contributing/issues_and_bugs/).
+#### Following Sections in the project will need to be changed to user preference
 
-## Development and Contribution ##
+- Change theme name to what you want it to be: ``` app/_config/theme.yml ```
+- Rename the root folder in the theme to the name you gave in theme.yml: ```themes/mytheme```
+- Change composer.json to expose the correct path assets ```"expose": ["themes/mytheme/assets/"]```
 
-If you would like to make changes to the SilverStripe core codebase, we have an extensive [guide to contributing code](http://doc.silverstripe.org/framework/en/misc/contributing/code).
-
-## Links ##
-
- * [Changelogs](http://doc.silverstripe.org/framework/en/changelogs/)
- * [Bugtracker: Framework](https://github.com/silverstripe/silverstripe-framework/issues)
- * [Bugtracker: CMS](https://github.com/silverstripe/silverstripe-cms/issues)
- * [Bugtracker: Installer](https://github.com/silverstripe/silverstripe-installer/issues)
- * [Forums](http://silverstripe.org/forums)
- * [Developer Mailinglist](https://groups.google.com/forum/#!forum/silverstripe-dev)
- * [License](./LICENSE)
+## .env
+You will need to create a .env file in the root of your project for your environment configurations.
