@@ -4,3 +4,6 @@
 
 @import "typography.css?2";
 body.mceContentBody{font-size:13px;}
+p{
+    line-height: 1.15 !important;
+}

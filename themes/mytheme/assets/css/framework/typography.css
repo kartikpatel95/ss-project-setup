@@ -2,11 +2,11 @@
 
 /* These are the default styles for the Simple theme */
 body {
-    font-size: 16px; /* This overrides the browsers default font size */
+    font-size: 14px; /* This overrides the browsers default font size */
     line-height: 20px; /* If you change the font-size make sure you change the line-height value as well - the usual ratio is around 1.5 (font-size x 1.5 = line-height) */
     margin-bottom: 20px;
     color: #333333;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 body a {
@@ -15,8 +15,10 @@ body a {
 
 /* this removes the underline from all links */
 body a:link {
-    -webkit-tap-highlight-color: #000
+    -webkit-tap-highlight-color: #b80000
 }
+
+/* this sets the highlight color when links are tapped on Safari (browser) on iPhone */
 
 
 /* HEADERS */
@@ -74,10 +76,9 @@ body a:link {
 
 /* PARAGRAGHS */
 .typography p {
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 14px;
+    /*line-height: 20px;*/
     margin: 0 0 20px;
-    font-family: "Open Sans"
 }
 
 .typography .intro {
@@ -97,21 +98,23 @@ body a:link {
 /* LINKS */
 .typography a,
 .typography a.intro {
-    /*color: blue;*/
+    color: #B80000;
     text-decoration: none;
 }
 
 .typography a:hover {
-    color: #000;
-    /*border-bottom: 1px dashed #B80000;*/
+    color: #D80000;
+    border-bottom: 1px dashed #B80000;
 }
 
 .typography a:focus {
-    outline: none;
 }
 
-.typography ul {
-    font-size: 14px;
+
+/* LIST STYLES
+-------------------------------------------- */
+.typography ul li {
+    list-style-type: disc;
 }
 
 /* adds disc style bullet to the list */
@@ -133,15 +136,15 @@ body a:link {
     margin: 0 auto;
 }
 
-.typography table.center {
+.typography table.center{
     margin: 0 auto;
 }
 
-.typography table.right {
+.typography table.right{
     margin-left: auto;
 }
 
-.typography table.left {
+.typography table.left{
     margin-right: auto;
 }
 
@@ -274,21 +277,4 @@ body a:link {
     margin: 5px 0;
     font-style: italic;
     color: #888;
-}
-
-/*Embed Video section in RTE*/
-.typography .leftAlone.ss-htmleditorfield-file.embed {
-    text-align: left;
-    margin-right: auto;
-}
-
-.typography .rightAlone.ss-htmleditorfield-file.embed {
-    text-align: right;
-    margin-left: auto;
-}
-
-.typography .center.ss-htmleditorfield-file.embed {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
