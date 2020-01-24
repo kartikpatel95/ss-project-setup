@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--[if !IE]><!-->
 <html lang="$ContentLocale">
     <!--<![endif]-->
     <!--[if IE 6 ]><html lang="$ContentLocale" class="ie ie6"><![endif]-->
@@ -19,5 +18,6 @@
     <footer>
         <% include Footer %>
     </footer>
+
     </body>
 </html>

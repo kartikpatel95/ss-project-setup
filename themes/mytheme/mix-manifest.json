@@ -1,0 +1,8 @@
+{
+    "/dist/css/layout.css": "/dist/css/layout.css",
+    "/dist/css/framework/editor.css": "/dist/css/framework/editor.css",
+    "/dist/css/framework/typography.css": "/dist/css/framework/typography.css",
+    "/dist/css/vendor/bootstrap.min.css": "/dist/css/vendor/bootstrap.min.css",
+    "/dist/javascript/vendor/bootstrap.min.js": "/dist/javascript/vendor/bootstrap.min.js",
+    "/dist/javascript/vendor/jquery.min.js": "/dist/javascript/vendor/jquery.min.js"
+}
