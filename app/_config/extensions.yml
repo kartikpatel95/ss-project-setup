@@ -3,4 +3,4 @@ name: myextension
 ---
 SilverStripe\Forms\FormField:
   extensions:
-    - DefaultFormField_Extensions
+    - App\Extensions\DefaultFormField_Extensions

@@ -6,7 +6,7 @@
  * Time: 22:49
  */
 
-namespace {
+namespace App\Extensions{
 
     use SilverStripe\Core\Extension;
     use SilverStripe\Forms\TextField;
