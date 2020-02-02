@@ -4,8 +4,8 @@
             $Title
         </h1>
     <% end_if %>
-    <% if $Content %>
-        $Content
+    <% if $ElementalArea %>
+        $ElementalArea
     <% end_if %>
     $Form
 </div>
