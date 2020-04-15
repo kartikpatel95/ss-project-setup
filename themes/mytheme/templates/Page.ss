@@ -20,8 +20,8 @@
 </div>
 <footer>
     <% include Footer %>
-    <% require javascript('/_resources/themes/mytheme/dist/javascript/vendor/jquery.min') %>
-    <% require javascript('/_resources/themes/mytheme/dist/javascript/vendor/bootstrap.min') %>
+    <% require javascript('_resources/themes/mytheme/dist/javascript/vendor/jquery.min.js') %>
+    <% require javascript('_resources/themes/mytheme/dist/javascript/vendor/bootstrap.min.js') %>
 </footer>
 </body>
 </html>
