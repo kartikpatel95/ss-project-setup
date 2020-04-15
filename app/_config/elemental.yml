@@ -1,0 +1,26 @@
+---
+Name: myelements
+---
+Page:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension
+  disallowed_elements:
+    - App\Elements\Models\BaseElement
+App\Elements\Models\TwoColumnElement:
+  disallowed_elements:
+    - App\Elements\Models\TwoColumnElement
+    - App\Elements\Models\ThreeColumnElement
+    - App\Elements\Models\FourColumnElement
+    - App\Elements\Models\BaseElement
+App\Elements\Models\ThreeColumnElement:
+  disallowed_elements:
+    - App\Elements\Models\TwoColumnElement
+    - App\Elements\Models\ThreeColumnElement
+    - App\Elements\Models\FourColumnElement
+    - App\Elements\Models\BaseElement
+App\Elements\Models\FourColumnElement:
+  disallowed_elements:
+    - App\Elements\Models\TwoColumnElement
+    - App\Elements\Models\ThreeColumnElement
+    - App\Elements\Models\FourColumnElement
+    - App\Elements\Models\BaseElement

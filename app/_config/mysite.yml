@@ -6,6 +6,3 @@ SilverStripe\Core\Manifest\ModuleManifest:
 SilverStripe\Forms\HTMLEditor\TinyMCEConfig:
   editor_css:
     - 'themes/mytheme/dist/css/framework/editor.css'
-Page:
-  extensions:
-    - DNADesign\Elemental\Extensions\ElementalPageExtension
