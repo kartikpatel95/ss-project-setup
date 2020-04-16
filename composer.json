@@ -41,7 +41,8 @@
             "web.config"
         ],
         "expose": [
-            "themes/mytheme/dist/"
+            "themes/mytheme/dist/javascript",
+            "themes/mytheme/dist/css"
         ]
     },
     "config": {
