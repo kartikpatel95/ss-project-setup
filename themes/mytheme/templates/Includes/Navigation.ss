@@ -5,7 +5,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav">
                 <% loop $Menu(1) %>
                     <li class="nav-item <% if $Children %>dropdown<% end_if %>">
                         <a class=" nav-link $LinkingMode <% if $Children %>dropdown-toggle<% end_if %>"
