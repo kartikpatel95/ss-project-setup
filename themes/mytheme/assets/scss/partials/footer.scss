@@ -25,6 +25,11 @@ header {
     flex-basis: auto;
     /*background-color: #eee;  let's fade to grey...  ' */
 }
+
+
+/*flex footer ends here*/
+
+
 footer {
     -webkit-box-flex: 0;
     -webkit-flex: 0;
@@ -33,9 +38,25 @@ footer {
     min-height: 150px;
     background: $basecolor;
     color: $white;
-}
 
-.footer > span{
-    color: white;
+    .footer {
+        .footer-heading {
+            padding: 0 0 10px 0;
+            font-size: 25px;
+            font-family: "Raleway";
+        }
+
+        .social-icons {
+            font-size: 25px;
+
+            a {
+                i {
+                    color: $white;
+                    &:hover {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
 }
-/*flex footer ends here*/
