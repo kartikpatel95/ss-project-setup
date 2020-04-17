@@ -1,3 +1,3 @@
 <div class="header">
-    <% include Navigation %>
 </div>
+<% include Navigation %>

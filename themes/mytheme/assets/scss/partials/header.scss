@@ -1,0 +1,12 @@
+header {
+    .header {
+        background: $basecolor;
+        min-height: 100px;
+    }
+
+    nav {
+        &.navbar {
+            background: #f1f1f1;
+        }
+    }
+}
