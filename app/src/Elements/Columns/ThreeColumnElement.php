@@ -1,39 +1,35 @@
 <?php
 
-namespace App\Elements\Models;
+namespace App\Elements\Columns;
 
+use DNADesign\Elemental\Models\ElementalArea;
 use DNADesign\Elemental\Extensions\ElementalAreasExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\LiteralField;
-use DNADesign\Elemental\Models\ElementalArea;
+use App\Elements\Models\BaseElement;
 
 /**
- * Class FourColumnElement
+ * Class ThreeColumnElement
  *
- * @package App\Element
+ * @package App\Elements
  */
-class FourColumnElement extends BaseElement
+class ThreeColumnElement extends BaseElement
 {
 
     /**
      * @var string
      */
-    private static $table_name = "FourColumnElement";
+    private static $table_name = "ThreeColumnElement";
 
     /**
      * @var string
      */
-    private static $singular_name = "Four Column Block";
+    private static $singular_name = "Three Column Element";
 
     /**
      * @var string
      */
-    private static $plural_name = "Four Column Blocks";
-
-    /**
-     * @var string
-     */
-    private static $description = "Four Columns";
+    private static $plural_name = "Three Column Elements";
 
     /**
      * @var string
@@ -41,13 +37,17 @@ class FourColumnElement extends BaseElement
     private static $icon = 'font-icon-columns';
 
     /**
+     * @var string
+     */
+    private static $description = "Three Column";
+
+    /**
      * @var array
      */
     private static $has_one = [
         'LeftColumn' => ElementalArea::class,
-        'MiddleLeft' => ElementalArea::class,
-        'MiddleRight' => ElementalArea::class,
-        'RightColumn' => ElementalArea::class
+        'MiddleColumn' => ElementalArea::class,
+        'RightColumn' => ElementalArea::class,
     ];
 
     /**
@@ -55,9 +55,8 @@ class FourColumnElement extends BaseElement
      */
     private static $owns = [
         'LeftColumn',
-        'MiddleLeft',
-        'MiddleRight',
-        'RightColumn'
+        'MiddleColumn',
+        'RightColumn',
     ];
 
     /**
@@ -81,16 +80,13 @@ class FourColumnElement extends BaseElement
 
         $fields->insertBefore('LeftColumn', LiteralField::create('RowStart', '<div class="row">'));
 
-        $fields->insertBefore('LeftColumn', LiteralField::create('LeftStart', '<div class="col-md-3">Left'));
+        $fields->insertBefore('LeftColumn', LiteralField::create('LeftStart', '<div class="col-md-4">Left'));
         $fields->insertAfter('LeftColumn', LiteralField::create('LeftEnd', '</div>'));
 
-        $fields->insertBefore('MiddleLeft', LiteralField::create('MiddleLeftStart', '<div class="col-md-3">Middle Left'));
-        $fields->insertAfter('MiddleLeft', LiteralField::create('MiddleLeftEnd', '</div>'));
+        $fields->insertBefore('MiddleColumn', LiteralField::create('MiddleStart', '<div class="col-md-4">Middle'));
+        $fields->insertAfter('MiddleColumn', LiteralField::create('MiddleEnd', '</div>'));
 
-        $fields->insertBefore('MiddleRight', LiteralField::create('MiddleRightStart', '<div class="col-md-3">Middle Rgiht'));
-        $fields->insertAfter('MiddleRight', LiteralField::create('MiddleRightEnd', '</div>'));
-
-        $fields->insertBefore('RightColumn', LiteralField::create('RightStart', '<div class="col-md-3">Right'));
+        $fields->insertBefore('RightColumn', LiteralField::create('RightStart', '<div class="col-md-4">Right'));
         $fields->insertAfter('RightColumn', LiteralField::create('RightStart', '</div>'));
 
         $fields->insertAfter('RightColumn', LiteralField::create('RowEnd', '</div>'));
@@ -103,7 +99,7 @@ class FourColumnElement extends BaseElement
      */
     public function getType(): string
     {
-        return "Four Columns";
+        return "Three Column";
     }
 
     /**

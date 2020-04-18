@@ -1,34 +1,40 @@
 <?php
 
-namespace App\Elements\Models;
+namespace App\Elements\Columns;
 
-use DNADesign\Elemental\Models\ElementalArea;
 use DNADesign\Elemental\Extensions\ElementalAreasExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\LiteralField;
+use DNADesign\Elemental\Models\ElementalArea;
+use App\Elements\Models\BaseElement;
 
 /**
- * Class TwoColumnElement
+ * Class FourColumnElement
  *
- * @package App\Elements
+ * @package App\Element
  */
-class TwoColumnElement extends BaseElement
+class FourColumnElement extends BaseElement
 {
 
     /**
      * @var string
      */
-    private static $table_name = "TwoColumnElement";
+    private static $table_name = "FourColumnElement";
 
     /**
      * @var string
      */
-    private static $singular_name = "Two Column Element";
+    private static $singular_name = "Four Column Block";
 
     /**
      * @var string
      */
-    private static $plural_name = "Two Column Elements";
+    private static $plural_name = "Four Column Blocks";
+
+    /**
+     * @var string
+     */
+    private static $description = "Four Columns";
 
     /**
      * @var string
@@ -36,15 +42,12 @@ class TwoColumnElement extends BaseElement
     private static $icon = 'font-icon-columns';
 
     /**
-     * @var string
-     */
-    private static $description = "Two Column";
-
-    /**
      * @var array
      */
     private static $has_one = [
         'LeftColumn' => ElementalArea::class,
+        'MiddleLeft' => ElementalArea::class,
+        'MiddleRight' => ElementalArea::class,
         'RightColumn' => ElementalArea::class
     ];
 
@@ -53,6 +56,8 @@ class TwoColumnElement extends BaseElement
      */
     private static $owns = [
         'LeftColumn',
+        'MiddleLeft',
+        'MiddleRight',
         'RightColumn'
     ];
 
@@ -77,10 +82,16 @@ class TwoColumnElement extends BaseElement
 
         $fields->insertBefore('LeftColumn', LiteralField::create('RowStart', '<div class="row">'));
 
-        $fields->insertBefore('LeftColumn', LiteralField::create('LeftStart', '<div class="col-md-6">Left'));
+        $fields->insertBefore('LeftColumn', LiteralField::create('LeftStart', '<div class="col-md-3">Left'));
         $fields->insertAfter('LeftColumn', LiteralField::create('LeftEnd', '</div>'));
 
-        $fields->insertBefore('RightColumn', LiteralField::create('RightStart', '<div class="col-md-6">Right'));
+        $fields->insertBefore('MiddleLeft', LiteralField::create('MiddleLeftStart', '<div class="col-md-3">Middle Left'));
+        $fields->insertAfter('MiddleLeft', LiteralField::create('MiddleLeftEnd', '</div>'));
+
+        $fields->insertBefore('MiddleRight', LiteralField::create('MiddleRightStart', '<div class="col-md-3">Middle Rgiht'));
+        $fields->insertAfter('MiddleRight', LiteralField::create('MiddleRightEnd', '</div>'));
+
+        $fields->insertBefore('RightColumn', LiteralField::create('RightStart', '<div class="col-md-3">Right'));
         $fields->insertAfter('RightColumn', LiteralField::create('RightStart', '</div>'));
 
         $fields->insertAfter('RightColumn', LiteralField::create('RowEnd', '</div>'));
@@ -93,15 +104,14 @@ class TwoColumnElement extends BaseElement
      */
     public function getType(): string
     {
-        return "Two Column";
+        return "Four Columns";
     }
 
     /**
      * @return bool
-     *
      * Needed for silverstripe archive fix. Unused though
      */
-    public static function Breadcrumbs(): bool
+    public static function Breadcrumbs()
     {
         return true;
     }
