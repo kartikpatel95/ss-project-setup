@@ -6,21 +6,31 @@ Page:
     - DNADesign\Elemental\Extensions\ElementalPageExtension
   disallowed_elements:
     - App\Elements\Models\BaseElement
-App\Elements\Models\TwoColumnElement:
+App\Elements\Columns\OneColumnElement:
   disallowed_elements:
-    - App\Elements\Models\TwoColumnElement
-    - App\Elements\Models\ThreeColumnElement
-    - App\Elements\Models\FourColumnElement
+    - App\Elements\Columns\OneColumnElement
+    - App\Elements\Columns\TwoColumnElement
+    - App\Elements\Columns\ThreeColumnElement
+    - App\Elements\Columns\FourColumnElement
     - App\Elements\Models\BaseElement
-App\Elements\Models\ThreeColumnElement:
+App\Elements\Columns\TwoColumnElement:
   disallowed_elements:
-    - App\Elements\Models\TwoColumnElement
-    - App\Elements\Models\ThreeColumnElement
-    - App\Elements\Models\FourColumnElement
+    - App\Elements\Columns\OneColumnElement
+    - App\Elements\Columns\TwoColumnElement
+    - App\Elements\Columns\ThreeColumnElement
+    - App\Elements\Columns\FourColumnElement
     - App\Elements\Models\BaseElement
-App\Elements\Models\FourColumnElement:
+App\Elements\Columns\ThreeColumnElement:
   disallowed_elements:
-    - App\Elements\Models\TwoColumnElement
-    - App\Elements\Models\ThreeColumnElement
-    - App\Elements\Models\FourColumnElement
+    - App\Elements\Columns\OneColumnElement
+    - App\Elements\Columns\TwoColumnElement
+    - App\Elements\Columns\ThreeColumnElement
+    - App\Elements\Columns\FourColumnElement
+    - App\Elements\Models\BaseElement
+App\Elements\Columns\FourColumnElement:
+  disallowed_elements:
+    - App\Elements\Columns\OneColumnElement
+    - App\Elements\Columns\TwoColumnElement
+    - App\Elements\Columns\ThreeColumnElement
+    - App\Elements\Columns\FourColumnElement
     - App\Elements\Models\BaseElement
