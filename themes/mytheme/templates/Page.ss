@@ -6,6 +6,7 @@
 <!--[if IE 8 ]><html lang="$ContentLocale" class="ie ie8"><![endif]-->
 
     <% include HeaderTag %>
+    $SiteConfig.Alert
 <body>
 <header>
     <% require themedCSS('dist/css/layout') %>
