@@ -16,8 +16,15 @@
         "dnadesign/silverstripe-elemental": "^4.3",
         "silverstripe/login-forms": "^4.1",
         "gorriecoe/silverstripe-linkfield": "^1.0",
-        "gorriecoe/silverstripe-link": "^1.2"
+        "gorriecoe/silverstripe-link": "^1.2",
+        "kartikpatel95/silverstripe-slack-alert": "dev-master"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/kartikpatel95/silverstripe-slack-alert"
+        }
+    ],
     "require-dev": {
         "phpunit/phpunit": "^5.7"
     },
