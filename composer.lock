@@ -742,12 +742,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartikpatel95/silverstripe-slack-alert.git",
-                "reference": "6f14adc344e5de287b2ec72d4346c737a2ee3785"
+                "reference": "c1d538c155d1e67c916a24c73357b581ee703ac5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartikpatel95/silverstripe-slack-alert/zipball/6f14adc344e5de287b2ec72d4346c737a2ee3785",
-                "reference": "6f14adc344e5de287b2ec72d4346c737a2ee3785",
+                "url": "https://api.github.com/repos/kartikpatel95/silverstripe-slack-alert/zipball/c1d538c155d1e67c916a24c73357b581ee703ac5",
+                "reference": "c1d538c155d1e67c916a24c73357b581ee703ac5",
                 "shasum": ""
             },
             "require": {
@@ -760,12 +760,12 @@
             "extra": {
                 "resources-dir": "_resources",
                 "expose": [
-                    "src/assets"
+                    "client/dist"
                 ]
             },
             "autoload": {
                 "psr-4": {
-                    "Emergency\\": "src/Emergency"
+                    "Alert\\": "src/Alert"
                 }
             },
             "license": [
@@ -782,7 +782,7 @@
                 "source": "https://github.com/kartikpatel95/silverstripe-slack-alert/tree/master",
                 "issues": "https://github.com/kartikpatel95/silverstripe-slack-alert/issues"
             },
-            "time": "2020-06-21T04:58:26+00:00"
+            "time": "2020-06-21T09:28:52+00:00"
         },
         {
             "name": "league/csv",

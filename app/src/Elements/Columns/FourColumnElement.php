@@ -3,10 +3,10 @@
 namespace App\Elements\Columns;
 
 use DNADesign\Elemental\Extensions\ElementalAreasExtension;
+use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\LiteralField;
 use DNADesign\Elemental\Models\ElementalArea;
-use App\Elements\Models\BaseElement;
 
 /**
  * Class FourColumnElement

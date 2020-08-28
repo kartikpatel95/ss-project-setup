@@ -2,11 +2,11 @@
 
 namespace App\Elements\Columns;
 
+use DNADesign\Elemental\Models\BaseElement;
 use DNADesign\Elemental\Models\ElementalArea;
 use DNADesign\Elemental\Extensions\ElementalAreasExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\LiteralField;
-use App\Elements\Models\BaseElement;
 
 /**
  * Class ThreeColumnElement

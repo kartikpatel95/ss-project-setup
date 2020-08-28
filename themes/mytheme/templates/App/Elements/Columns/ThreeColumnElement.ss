@@ -1,5 +1,5 @@
-<div>
-    <div class="$ContainerType">
+<div class="three-column-block">
+    <div class="container">
         <% if $ShowTitle && $Title %>
             <div class="col-title">
                 <h2>

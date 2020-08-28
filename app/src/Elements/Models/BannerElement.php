@@ -2,6 +2,7 @@
 
 namespace App\Elements\Models;
 
+use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 
