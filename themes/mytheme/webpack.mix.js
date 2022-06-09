@@ -35,8 +35,8 @@ mix.sass(config.scss.src, config.scss.dest).sourceMaps()
     .copy(config.vendor.javascript, './dist/javascript/vendor')
     .browserSync({
         open: "external",
-        proxy: "ssprojectsetup.vcap.me",
-        host: "ssprojectsetup.vcap.me",
+        proxy: "projectsetup.vcap.me",
+        host: "projectsetup.vcap.me",
         injectChanges: true,
         files: config.watch,
     });

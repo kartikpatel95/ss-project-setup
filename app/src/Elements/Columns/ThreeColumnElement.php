@@ -59,6 +59,19 @@ class ThreeColumnElement extends BaseElement
         'RightColumn',
     ];
 
+    private static array $cascade_deletes = [
+        'LeftColumn',
+        'MiddleColumn',
+        'RightColumn',
+    ];
+
+    private static array $cascade_duplicates = [
+        'LeftColumn',
+        'MiddleColumn',
+        'RightColumn',
+    ];
+
+
     /**
      * @var array
      */

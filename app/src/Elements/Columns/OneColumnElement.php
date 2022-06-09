@@ -53,6 +53,14 @@ class OneColumnElement extends BaseElement
         'Column',
     ];
 
+    private static array $cascade_deletes = [
+        'Column',
+    ];
+
+    private static array $cascade_duplicates = [
+        'Column',
+    ];
+
     /**
      * @var array
      */

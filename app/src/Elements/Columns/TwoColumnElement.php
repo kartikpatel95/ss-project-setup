@@ -57,6 +57,16 @@ class TwoColumnElement extends BaseElement
         'RightColumn'
     ];
 
+    private static array $cascade_deletes = [
+        'LeftColumn',
+        'RightColumn',
+    ];
+
+    private static array $cascade_duplicates = [
+        'LeftColumn',
+        'RightColumn',
+    ];
+
     /**
      * @var array
      */

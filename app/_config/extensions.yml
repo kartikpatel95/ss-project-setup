@@ -1,9 +1,6 @@
 ---
 name: myextension
 ---
-SilverStripe\Forms\FormField:
-  extensions:
-    - App\Extensions\DefaultFormField_Extensions
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - App\Extensions\SiteConfig_Extensions
+    - App\Extensions\SiteConfigExtensions

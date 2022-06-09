@@ -5,6 +5,7 @@ namespace App\Elements\Models;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
+use SilverStripe\Forms\FieldList;
 
 /**
  * Class BannerElement
@@ -14,59 +15,36 @@ use SilverStripe\Assets\Image;
 class BannerElement extends BaseElement
 {
 
-    /**
-     * @var string
-     */
-    private static $table_name = "BannerElement";
+    private static string $table_name = "BannerElement";
 
-    /**
-     * @var string
-     */
-    private static $singular_name = "Banner Element";
+    private static string $singular_name = "Banner Element";
 
-    /**
-     * @var string
-     */
-    private static $plural_name = "Banner Elements";
+    private static string $plural_name = "Banner Elements";
 
-    /**
-     * @var string
-     */
-    private static $icon = 'font-icon-block-banner';
+    private static string $icon = 'font-icon-block-banner';
 
-    /**
-     * @var string
-     */
-    private static $description = "Banner";
+    private static string $description = "Banner";
 
-    /**
-     * @var array
-     */
-    private static $db = [
+    private static array $db = [
         'Height' => "Enum('300,350,400,450,500')",
         'ImageLength' => "Enum('full,container')",
     ];
 
-    /**
-     * @var array
-     */
-    private static $has_one = [
+    private static array $has_one = [
         'Banner' => Image::class
     ];
 
-    /**
-     * @var array
-     */
-    private static $owns = [
+    private static array $owns = [
         'Banner'
     ];
 
-    public function getCMSFields()
+    public function getCMSFields(): FieldList
     {
         $fields = parent::getCMSFields();
-        $fields->removeByName('ContainerType');
         $fields->addFieldToTab('Root.Main', UploadField::create('Banner'));
-        $fields->dataFieldByName('ImageLength')->setTitle('Image Length');
+        $fields->dataFieldByName('ImageLength')
+            ->setTitle('Image Length')
+            ->setDescription('Full will go edge to edge of the screen, whereas container will leave padding on either side of the image.');
 
         return $fields;
     }

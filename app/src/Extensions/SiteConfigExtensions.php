@@ -16,28 +16,20 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
  *
  * @package App\Extensions
  */
-class SiteConfig_Extensions extends DataExtension
+class SiteConfigExtensions extends DataExtension
 {
 
-    /**
-     * @var string[]
-     */
-    private static $has_one = [
+    private static array $has_one = [
         'Logo' => Image::class,
     ];
 
-
-    private static $has_many = [
+    private static array $has_many = [
         'SocialIcons' => SocialMedia::class,
     ];
 
-    /**
-     * @var string[]
-     */
-    private static $owns = [
+    private static array $owns = [
         'Logo'
     ];
-
 
     public function updateCMSFields(FieldList $fields)
     {
@@ -49,9 +41,6 @@ class SiteConfig_Extensions extends DataExtension
 
     }
 
-    /**
-     * @return GridField
-     */
     public function getSocialGrid(): GridField
     {
         $grid = GridField::create('SocialIcons', 'Social Media', $this->owner->SocialIcons(),
