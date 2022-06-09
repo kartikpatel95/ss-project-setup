@@ -1,3 +1,3 @@
-<div class="banner_element $ImageLength">
-    <img src="$Banner.URL" alt="$Banner.Title" style="height:{$Height}px">
+<div class="banner_element $ImageLength" style="background: url($Banner.URL); height:{$Height}px;
+    <% if $Parallax %>background-attachment: fixed;<% end_if %>">
 </div>

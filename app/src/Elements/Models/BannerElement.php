@@ -28,6 +28,7 @@ class BannerElement extends BaseElement
     private static array $db = [
         'Height' => "Enum('300,350,400,450,500')",
         'ImageLength' => "Enum('full,container')",
+        'Parallax' => 'Boolean',
     ];
 
     private static array $has_one = [
@@ -45,6 +46,7 @@ class BannerElement extends BaseElement
         $fields->dataFieldByName('ImageLength')
             ->setTitle('Image Length')
             ->setDescription('Full will go edge to edge of the screen, whereas container will leave padding on either side of the image.');
+        $fields->dataFieldByName('Parallax')->setTitle('Parallax Scroll');
 
         return $fields;
     }
