@@ -43,7 +43,8 @@
         ],
         "expose": [
             "themes/mytheme/dist/javascript",
-            "themes/mytheme/dist/css"
+            "themes/mytheme/dist/css",
+            "app/assets"
         ]
     },
     "config": {
