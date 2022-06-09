@@ -15,8 +15,8 @@ class BaseElementExtensions extends DataExtension
     ];
 
     private static array $defaults = [
-        'PaddingTop' => 2,
-        'PaddingBottom' => 2,
+        'PaddingTop' => 3,
+        'PaddingBottom' => 3,
     ];
 
     public function updateCMSFields(FieldList $fields)
