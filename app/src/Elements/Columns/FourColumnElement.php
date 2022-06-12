@@ -17,45 +17,24 @@ use DNADesign\Elemental\Models\ElementalArea;
 class FourColumnElement extends BaseElement
 {
 
-    /**
-     * @var string
-     */
-    private static $table_name = "FourColumnElement";
+    private static string $table_name = "FourColumnElement";
 
-    /**
-     * @var string
-     */
-    private static $singular_name = "Four Column Block";
+    private static string $singular_name = "Four Column Block";
 
-    /**
-     * @var string
-     */
-    private static $plural_name = "Four Column Blocks";
+    private static string $plural_name = "Four Column Blocks";
 
-    /**
-     * @var string
-     */
-    private static $description = "Four Columns";
+    private static string $description = "Four Columns";
 
-    /**
-     * @var string
-     */
-    private static $icon = 'font-icon-columns';
+    private static string $icon = 'font-icon-columns';
 
-    /**
-     * @var array
-     */
-    private static $has_one = [
+    private static array $has_one = [
         'LeftColumn' => ElementalArea::class,
         'MiddleLeft' => ElementalArea::class,
         'MiddleRight' => ElementalArea::class,
         'RightColumn' => ElementalArea::class
     ];
 
-    /**
-     * @var array
-     */
-    private static $owns = [
+    private static array $owns = [
         'LeftColumn',
         'MiddleLeft',
         'MiddleRight',
@@ -81,14 +60,8 @@ class FourColumnElement extends BaseElement
         ColumnElementExtensions::class,
     ];
 
-    /**
-     * @var bool
-     */
     private static $inline_editable = false;
 
-    /**
-     * @return FieldList
-     */
     public function getCMSFields(): FieldList
     {
         $fields = parent::getCMSFields();
