@@ -2,6 +2,7 @@
 
 namespace App\Elements\Columns;
 
+use App\Extensions\ColumnElementExtensions;
 use DNADesign\Elemental\Extensions\ElementalAreasExtension;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\FieldList;
@@ -75,11 +76,9 @@ class FourColumnElement extends BaseElement
         'RightColumn',
     ];
 
-    /**
-     * @var array
-     */
-    private static $extensions = [
-        ElementalAreasExtension::class
+    private static array $extensions = [
+        ElementalAreasExtension::class,
+        ColumnElementExtensions::class,
     ];
 
     /**

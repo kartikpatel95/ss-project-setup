@@ -1,0 +1,77 @@
+@import "~bootstrap/scss/bootstrap";
+
+.form-element__form {
+  .userform {
+    label.left {
+      font-weight: 400;
+    }
+
+    .btn-toolbar.Actions {
+      .action {
+        box-shadow: none;
+
+        &[type='submit'] {
+          margin-right: 0;
+          background: $basecolor;
+          padding: 10px;
+          border-radius: 25px;
+          width: 150px;
+          border-color: $basecolor;
+          color: white;
+        }
+
+        &[name="action_clearForm"] {
+          @extend .btn-link;
+          background: transparent;
+          border-color: transparent;;
+          margin-left: 1.875em;
+        }
+      }
+    }
+  }
+
+  .field {
+    margin-bottom: 1.875em;
+  }
+
+  input.text {
+    background-color: $form-grey;
+    padding: 0.625em 1.25em;
+    border: 1px solid $form-grey;
+    max-width: 100%;
+    width: 314px;
+    height: 45px;
+    @include border-radius(3px);
+
+    &:invalid {
+      box-shadow: none;
+    }
+
+    &.error {
+      border-color: $form-error;
+    }
+  }
+
+  .select-group {
+    width: 314px;
+    max-width: 100%;
+  }
+
+  textarea {
+    background-color: $form-grey;
+    border: 1px solid $form-grey;
+    width: 314px;
+    max-width: 100%;
+    resize: none;
+    padding: 0.625em 1.25em;
+    @include border-radius(3px);
+
+    &.error {
+      border-color: $form-error;
+    }
+  }
+
+  .action {
+    margin-right: 1.875em;
+  }
+}

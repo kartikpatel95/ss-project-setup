@@ -16,7 +16,8 @@
         "dnadesign/silverstripe-elemental": "^4.3",
         "silverstripe/login-forms": "^4.1",
         "gorriecoe/silverstripe-linkfield": "^1.0",
-        "gorriecoe/silverstripe-link": "^1.2"
+        "gorriecoe/silverstripe-link": "^1.2",
+        "dnadesign/silverstripe-elemental-userforms": "^3.2"
     },
     "autoload": {
         "psr-4": {

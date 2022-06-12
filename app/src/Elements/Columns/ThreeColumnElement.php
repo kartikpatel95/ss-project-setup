@@ -2,6 +2,7 @@
 
 namespace App\Elements\Columns;
 
+use App\Extensions\ColumnElementExtensions;
 use DNADesign\Elemental\Models\BaseElement;
 use DNADesign\Elemental\Models\ElementalArea;
 use DNADesign\Elemental\Extensions\ElementalAreasExtension;
@@ -72,11 +73,9 @@ class ThreeColumnElement extends BaseElement
     ];
 
 
-    /**
-     * @var array
-     */
-    private static $extensions = [
-        ElementalAreasExtension::class
+    private static array $extensions = [
+        ElementalAreasExtension::class,
+        ColumnElementExtensions::class,
     ];
 
     /**

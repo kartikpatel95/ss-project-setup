@@ -2,6 +2,7 @@
 
 namespace App\Elements\Columns;
 
+use App\Extensions\ColumnElementExtensions;
 use DNADesign\Elemental\Extensions\ElementalAreasExtension;
 use DNADesign\Elemental\Models\BaseElement;
 use DNADesign\Elemental\Models\ElementalArea;
@@ -67,11 +68,9 @@ class TwoColumnElement extends BaseElement
         'RightColumn',
     ];
 
-    /**
-     * @var array
-     */
-    private static $extensions = [
-        ElementalAreasExtension::class
+    private static array $extensions = [
+        ElementalAreasExtension::class,
+        ColumnElementExtensions::class,
     ];
 
     /**
