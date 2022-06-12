@@ -24,7 +24,7 @@ class BaseElementExtensions extends DataExtension
         $fields->addFieldsToTab('Root.Layout', [
            OptionsetField::create('PaddingTop', 'Padding Top', $this->owner->dbObject('PaddingTop')->enumValues())
                ->addExtraClass('cms-option-set-values'),
-           OptionsetField::create('PaddingBottom', 'Padding Top', $this->owner->dbObject('PaddingBottom')->enumValues())
+           OptionsetField::create('PaddingBottom', 'Padding Bottom', $this->owner->dbObject('PaddingBottom')->enumValues())
                 ->addExtraClass('cms-option-set-values'),
         ]);
     }
